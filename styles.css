@@ -1,29 +1,45 @@
+/* Define pink color palette using shorthand notation */
+:root {
+  --pink-dull: #402231; /* Dull pink */
+  --pink-dark: #9f004d; /* Dark pink */
+  --pink-rich: #c4005e; /* Rich pink */
+  --pink-bright: #d64089; /* Bright pink */
+  --pink-main: #e65b9e; /* Normal pink */
+  --pink-rose: #ff80bd; /* Rose pink */
+  --pink-light: #ffbfde; /* Light pink */
+  
+  --text-dark: #333; /* Dark text color */
+  --text-light: #fff; /*Light text color*/
+}
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
-font-size: 16px;
+  background-color: var(--text-light);
+  font-size: 16px;
 }
 
 nav {
-  background-color: #333;
+  background-color: var(--pink-light);
   text-align: center;
   padding: 20px 0;
+  border: none;
 }
 
 button {
   margin: 0 10px;
   padding: 8px 16px;
   border: none;
-  background-color: #555;
-  color: #fff;
+  border-radius: 15px;
+  background-color: var(--pink-main);
+  color: var(--text-light);
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #777;
+  background-color: var(--pink-bright);
 }
 
 .section {
@@ -33,8 +49,8 @@ button:hover {
 
 .section.active {
   display: block;
-  background-color: #fff;
-  border-top: 2px solid #333;
+  background-color: var(--text-light);
+  border-top: none;
 }
 
 h2 {
@@ -44,10 +60,32 @@ h2 {
 p {
   margin-bottom: 0;
 }
+
+/* Adjusted styles to remove margin and extend background color to the bottom of the screen */
+
 .about-content {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 30px; /* Rounded corners for the section */
+  background-color: ; /* Light background color */
+}
+
+.about-text {
+  flex: 1;
+  max-width: 80%;
+}
+
+.about-text h2 {
+  margin-top: 0;
+  color: var(--pink-dark);
+}
+
+.about-text p {
+  color: var(--text-dark);
 }
 
 .about-image img {
@@ -55,62 +93,32 @@ p {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  margin-right: 20px;
 }
 
-.about-text {
-  flex: 1;
-}
-
-.about-text h2 {
-  margin-top: 0;
-}
 .about-links {
-  margin-top: 20px;
-}
-
-.about-links h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.about-links ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.about-links ul li {
-  margin-bottom: 8px;
-}
-
-.about-links ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.about-links ul li a:hover {
-  color: #555;
-}
-.about-links {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .about-column {
   flex: 1;
-  margin-right: 20px;
+  overflow: hidden; /* Hide overflow content */
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
-.about-column:last-child {
-  margin-right: 0;
+.about-section {
+  position: relative; /* Set position to relative */
+  padding: 20px;
+  background-color: var(--pink-main);
 }
 
-.about-links h3 {
-  font-size: 20px;
+.about-section h2 {
   margin-bottom: 10px;
+  color: var(--text-light);
 }
 
 .about-links ul {
@@ -124,11 +132,15 @@ p {
 
 .about-links ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-dark);
   font-weight: bold;
-  transition: color 0.3s;
+  background-color: var(--pink-light); /* Background color for links */
+  padding: 10px; /* Add padding for better readability */
+  display: block; /* Ensure links fill their container */
+  border-radius: 15px; /* Rounded corners for links */
+  transition: background-color 0.3s;
 }
 
 .about-links ul li a:hover {
-  color: #555;
+  background-color: var(--pink-rose); /* Adjust hover background color */
 }
