@@ -27,6 +27,11 @@ nav {
   border: none;
 }
 
+/* Add styles for active button */
+nav button.active {
+  background-color: var(--pink-rich); /* Change color for active button */
+}
+
 button {
   margin: 0 10px;
   padding: 8px 16px;
