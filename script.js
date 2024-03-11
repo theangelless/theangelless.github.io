@@ -7,35 +7,26 @@ function showSection(sectionId) {
   sectionToShow.classList.add('active');
 }
 
-// Get references to the buttons and sections
+// Get references to the buttons
 const aboutBtn = document.getElementById('aboutBtn');
 const galleryBtn = document.getElementById('galleryBtn');
 const contactsBtn = document.getElementById('contactsBtn');
 
-const aboutSection = document.getElementById('about');
-const gallerySection = document.getElementById('gallery');
-const contactsSection = document.getElementById('contacts');
-
-// Function to toggle active class based on active section
-function toggleActiveButton(button) {
-    // Remove 'active' class from all buttons
-    aboutBtn.classList.remove('active');
-    galleryBtn.classList.remove('active');
-    contactsBtn.classList.remove('active');
-
-    // Add 'active' class to the clicked button
-    button.classList.add('active');
-}
-
 // Event listeners for button clicks
 aboutBtn.addEventListener('click', () => {
-    toggleActiveButton(aboutBtn);
+    aboutBtn.classList.add('active');
+    galleryBtn.classList.remove('active');
+    contactsBtn.classList.remove('active');
 });
 
 galleryBtn.addEventListener('click', () => {
-    toggleActiveButton(galleryBtn);
+    aboutBtn.classList.remove('active');
+    galleryBtn.classList.add('active');
+    contactsBtn.classList.remove('active');
 });
 
 contactsBtn.addEventListener('click', () => {
-    toggleActiveButton(contactsBtn);
+    aboutBtn.classList.remove('active');
+    galleryBtn.classList.remove('active');
+    contactsBtn.classList.add('active');
 });
