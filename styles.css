@@ -55,10 +55,12 @@ button:hover {
 
 h2 {
   margin-top: 0;
+  color: var(--pink-dark);
 }
 
 p {
   margin-bottom: 0;
+  color: var(--text-dark);
 }
 
 /* Adjusted styles to remove margin and extend background color to the bottom of the screen */
@@ -68,14 +70,12 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
   border-radius: 30px; /* Rounded corners for the section */
 }
 
 .about-text {
   flex: 1;
-  max-width: 80%;
+  max-width: 75%;
 }
 
 .about-text h2 {
@@ -91,6 +91,7 @@ p {
   border-radius: 50%;
   width: 150px;
   height: 150px;
+  padding-right: 20px;
   object-fit: cover;
 }
 
